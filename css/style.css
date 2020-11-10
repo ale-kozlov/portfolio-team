@@ -421,6 +421,9 @@ input:checked ~ .welcome__menu-wrapper {
   transition-duration: 0.4s;
 }
 
+.feedback {
+  z-index: 5;
+}
 .feedback__wrapper {
   width: 100%;
   min-height: 100%;
@@ -431,11 +434,10 @@ input:checked ~ .welcome__menu-wrapper {
   transform: translate(-50%);
 }
 .feedback__form {
-  max-width: 812px;
+  width: 812px;
   height: 624px;
   background-color: #fff;
   border-radius: 10px;
-  padding: 60px 146px;
   text-transform: capitalize;
   font-family: Lato, Arial, sans-serif;
   font-size: 16px;
@@ -449,7 +451,7 @@ input:checked ~ .welcome__menu-wrapper {
   transform: translate(-50%);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 .feedback #feedback {
   display: none;
@@ -458,25 +460,41 @@ input:checked ~ .welcome__menu-wrapper {
   top: 0;
 }
 .feedback__title {
-  font-family: Lato, Arial, sans-serif;
+  font-family: "Myriad Pro", Arial, sans-serif;
   font-size: 50px;
-  font-weight: 300;
+  font-weight: 400;
+  line-height: 98px;
   text-align: center;
   color: #368bf3;
   text-transform: capitalize;
 }
-.feedback__input, .feedback__message {
+.feedback__input {
   max-width: 520px;
-  border: 1px solid #5a5a5a;
+  margin: 8px auto 18px;
+}
+.feedback__name, .feedback__email, .feedback__message {
+  width: 100%;
+  border: 1px solid #b7c0ca;
   border-radius: 10px;
   margin: 10px 0;
-  line-height: 35px;
   padding: 5px 20px;
   outline: none;
-  flex-grow: 1;
+  font-family: Lato, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 35px;
+  font-weight: 400;
+  text-align: left;
+}
+.feedback__name:hover, .feedback__email:hover, .feedback__message:hover {
+  border-color: #000;
+}
+.feedback__name:focus, .feedback__email:focus, .feedback__message:focus {
+  background-color: #cad9fa;
+  border-color: #3677fd;
 }
 .feedback__message {
   resize: none;
+  height: 180px;
 }
 .feedback__btn-send {
   width: 204px;
@@ -501,10 +519,11 @@ input:checked ~ .welcome__menu-wrapper {
   display: block;
   position: relative;
   transform: rotate(45deg);
-  font-size: 34px;
+  font-size: 60px;
+  font-weight: 300;
   color: #3677fd;
-  bottom: 400px;
-  left: 220px;
+  bottom: 270px;
+  left: 650px;
   cursor: pointer;
 }
 
