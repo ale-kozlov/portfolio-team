@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Portfolio</title>
@@ -34,22 +33,22 @@ linear-gradient(39deg, rgb(54, 149, 255) 0%, rgb(53, 100, 252) 100%);">
         </ul>
         <div class="welcome__social">
           <a class="welcome__social-link welcome__social-link--facebook"
-             href="https://www.facebook.com/">
+             href="https://www.facebook.com/" target="_blank">
             <img class="welcome__social-icon welcome__social-icon--facebook"
                  src="image/facebook.svg" alt="Facebook">
           </a>
           <a class="welcome__social-link welcome__social-link--twitter"
-             href="https://www.twitter.com/">
+             href="https://www.twitter.com/" target="_blank">
             <img class="welcome__social-icon welcome__social-icon--twitter"
                  src="image/twitter.svg" alt="Twitter">
           </a>
           <a class="welcome__social-link welcome__social-link--dribbble"
-             href="https://www.dribbble.com/">
+             href="https://www.dribbble.com/" target="_blank">
             <img class="welcome__social-icon welcome__social-icon--dribbble"
                  src="image/dribbble.svg" alt="Dribbble">
           </a>
           <a class="welcome__social-link welcome__social-link--behance"
-             href="https://www.behance.net/">
+             href="https://www.behance.net/" target="_blank">
             <img class="welcome__social-icon welcome__social-icon--behance"
                  src="image/behance.svg" alt="Behance">
           </a>
@@ -180,16 +179,20 @@ linear-gradient(39deg, rgb(54, 149, 255) 0%, rgb(53, 100, 252) 100%);">
   <div class="inner">
     <h2 class="clients__title">Clients</h2>
     <div class="clients__container">
-      <a class="clients__container__link" href="https://www.microsoft.com/">
+      <a class="clients__container__link"
+         href="https://www.microsoft.com/" target="_blank">
         <img src="image/microsoft.png" alt="microsoft">
       </a>
-      <a class="clients__container__link" href="https://www.samsung.com/">
+      <a class="clients__container__link"
+         href="https://www.samsung.com/" target="_blank">
         <img src="image/samsung.png" alt="samsung">
       </a>
-      <a class="clients__container__link" href="https://www.ibm.com/">
+      <a class="clients__container__link"
+         href="https://www.ibm.com/" target="_blank">
         <img src="image/ibm.png" alt="ibm">
       </a>
-      <a class="clients__container__link" href="https://www.google.com/">
+      <a class="clients__container__link"
+         href="https://www.google.com/" target="_blank">
         <img src="image/google.png" alt="google">
       </a>
     </div>
@@ -202,15 +205,17 @@ linear-gradient(39deg, rgb(54, 149, 255) 0%, rgb(53, 100, 252) 100%);">
   <div class="feedback__wrapper">
     <form action="/" class="feedback__form" method="get">
       <h2 class="feedback__title">Hire me</h2>
-      <label>
-        <input class="feedback__input" type="text" name="name" id="mail" placeholder="Your Name" required>
-      </label>
-      <label>
-        <input class="feedback__input" type="email" name="email" id="email" placeholder="Your E-Mail" required>
-      </label>
-      <label>
-      <textarea class="feedback__message" type="text" name="message" id="message" placeholder="Your Message" required></textarea>
-      </label>
+      <div class="feedback__input">
+        <label>
+          <input class="feedback__name" type="text" name="name" id="mail" placeholder="Your Name" required>
+        </label>
+        <label>
+          <input class="feedback__email" type="email" name="email" id="email" placeholder="Your E-Mail" required>
+        </label>
+        <label>
+          <textarea class="feedback__message" type="text" name="message" id="message" placeholder="Your Message" required></textarea>
+        </label>
+      </div>
       <button class="feedback__btn-send" type="submit">Send Message</button>
       <label class="feedback__btn-close" for="feedback">+</label>
     </form>
