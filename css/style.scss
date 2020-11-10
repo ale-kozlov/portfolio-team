@@ -448,22 +448,23 @@ ul, li {
 //---------------------Pop-Up---------------------
 
 .feedback {
+  z-index: 5;
+
   &__wrapper {
     width: 100%;
     min-height: 100%;
     background-color: rgba(0,0,0,0.5);
-
     position: fixed;
     left: 50%;
     top: -600%;
     transform: translate(-50%);
   }
   &__form {
-    max-width: 812px;
+    width: 812px;
     height: 624px;
     background-color: #fff;
     border-radius: 10px;
-    padding: 60px 146px;
+    //padding: 60px 146px;
     text-transform: capitalize;
     font-family: Lato, Arial, sans-serif;
     font-size: 16px;
@@ -471,7 +472,6 @@ ul, li {
     text-align: left;
     line-height: 35px;
     color: #5a5a5a;
-
     position: absolute;
     top: 80px;
     left: 50%;
@@ -479,7 +479,7 @@ ul, li {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
   }
   #feedback{
     display: none;
@@ -488,26 +488,45 @@ ul, li {
     top: 0;
   }
   &__title {
-    font-family: Lato, Arial, sans-serif;
+    font-family: "Myriad Pro", Arial, sans-serif;
     font-size: 50px;
-    font-weight: 300;
+    font-weight: 400;
+    line-height: 98px;
     text-align: center;
     color: #368bf3;
     text-transform: capitalize;
   }
-  &__input,
-  &__message {
+  &__input {
     max-width: 520px;
-    border: 1px solid #5a5a5a;
+    margin: 8px auto 18px;
+  }
+  &__name,
+  &__email,
+  &__message {
+    width: 100%;
+    border: 1px solid #b7c0ca;
     border-radius: 10px;
     margin: 10px 0;
-    line-height: 35px;
     padding: 5px 20px;
     outline: none;
-    flex-grow: 1;
+
+    font-family: Lato, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 35px;
+    font-weight: 400;
+    text-align: left;
+
+    &:hover {
+      border-color: #000;
+    }
+    &:focus {
+      background-color: #cad9fa;
+      border-color: #3677fd;
+    }
   }
   &__message {
     resize: none;
+    height: 180px;
   }
   &__btn-send {
     width: 204px;
@@ -533,10 +552,11 @@ ul, li {
     display: block;
     position: relative;
     transform: rotate(45deg);
-    font-size: 34px;
+    font-size: 60px;
+    font-weight: 300;
     color: #3677fd;
-    bottom: 400px;
-    left: 220px;
+    bottom: 270px;
+    left: 650px;
     cursor: pointer;
   }
 }
