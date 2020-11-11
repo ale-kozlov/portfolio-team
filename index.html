@@ -3,11 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Portfolio</title>
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+  <symbol id="arrow" viewBox="0 0 20 20">
+    <path d="M9 3.828l-6.071 6.071-1.414-1.414 8.485-8.485 8.485 8.485-1.414 1.414-6.071-6.071v16.172h-2v-16.172z"/>
+  </symbol>
+</svg>
+
 <header class="welcome" style="background: url('image/main-bg.png') no-repeat top center / cover,
 linear-gradient(39deg, rgb(54, 149, 255) 0%, rgb(53, 100, 252) 100%);">
   <div class="inner">
@@ -144,32 +150,32 @@ linear-gradient(39deg, rgb(54, 149, 255) 0%, rgb(53, 100, 252) 100%);">
       <li class="works__item"
           style="background: #f4f4f4 url('image/work1.png')
           no-repeat bottom / 284px 245px">
-        <a href="#" class="works__link"></a>
+        <a href="javascript:void(0)" class="works__link"></a>
       </li>
       <li class="works__item"
           style="background: #f4f4f4 url('image/work2.png')
           no-repeat bottom / 170px 240px">
-        <a href="#" class="works__link"></a>
+        <a href="javascript:void(0)" class="works__link"></a>
       </li>
       <li class="works__item"
           style="background: #f4f4f4 url('image/work3.png')
           no-repeat bottom / 278px 240px">
-        <a href="#" class="works__link"></a>
+        <a href="javascript:void(0)" class="works__link"></a>
       </li>
       <li class="works__item"
           style="background: #f4f4f4 url('image/work4.png')
           no-repeat center / 284px 194px">
-        <a href="#" class="works__link"></a>
+        <a href="javascript:void(0)" class="works__link"></a>
       </li>
       <li class="works__item"
           style="background: #f4f4f4 url('image/work5.png')
           no-repeat center / 149px 161px">
-        <a href="#" class="works__link"></a>
+        <a href="javascript:void(0)" class="works__link"></a>
       </li>
       <li class="works__item"
           style="background: #f4f4f4 url('image/work6.png')
           no-repeat center / 284px 160px">
-        <a href="#" class="works__link"></a>
+        <a href="javascript:void(0)" class="works__link"></a>
       </li>
     </ul>
   </div>
@@ -199,30 +205,6 @@ linear-gradient(39deg, rgb(54, 149, 255) 0%, rgb(53, 100, 252) 100%);">
   </div>
 </section>
 
-<section class="feedback">
-  <input type="checkbox" id="feedback">
-
-  <div class="feedback__wrapper">
-    <form action="/" class="feedback__form" method="get">
-      <h2 class="feedback__title">Hire me</h2>
-      <div class="feedback__input">
-        <label>
-          <input class="feedback__name" type="text" name="name" id="mail" placeholder="Your Name" required>
-        </label>
-        <label>
-          <input class="feedback__email" type="email" name="email" id="email" placeholder="Your E-Mail" required>
-        </label>
-        <label>
-          <textarea class="feedback__message" type="text" name="message" id="message" placeholder="Your Message" required></textarea>
-        </label>
-      </div>
-      <button class="feedback__btn-send" type="submit">Send Message</button>
-      <label class="feedback__btn-close" for="feedback">+</label>
-    </form>
-  </div>
-  
-</section>
-
 <footer class="footer" style="background: url('image/footer-bg.png') no-repeat top center / cover,
 linear-gradient(39deg, rgb(54, 149, 255) 0%, rgb(53, 100, 252) 100%);">
   <h2 class="visually-hidden">Additional information</h2>
@@ -236,14 +218,66 @@ linear-gradient(39deg, rgb(54, 149, 255) 0%, rgb(53, 100, 252) 100%);">
   </div>
 </footer>
 
-<section class="cookies">
+<div class="feedback">
+  <input type="checkbox" id="feedback">
+  <div class="feedback__wrapper">
+    <form action="javascript:void(0)" class="feedback__form" id="feedback-form" method="post">
+      <h2 class="feedback__title">Hire me</h2>
+      <div class="feedback__input">
+        <label>
+          <input class="feedback__name" type="text" name="name" id="mail" placeholder="Your Name" autofocus  required>
+        </label>
+        <label>
+          <input class="feedback__email" type="email" name="email" id="email" placeholder="Your E-Mail" required>
+        </label>
+        <label>
+          <textarea class="feedback__message" name="message" id="message" placeholder="Your Message" required></textarea>
+        </label>
+      </div>
+      <button class="feedback__btn-send" type="submit">Send Message</button>
+      <label class="feedback__btn-close" for="feedback">+</label>
+    </form>
+  </div>
+</div>
+
+<div class="modal">
+  <div class="modal__inner inner">
+    <div class="modal__icon">
+      <img src="image/symu-icon@2x.png" alt="Symu" width="191" height="220">
+    </div>
+    <div class="modal__text-block">
+      <h2 class="modal__title">Thanks for downloading our template!</h2>
+      <p class="modal__text">Hope that you enjoy it well! Check also our site</p>
+    </div>
+    <a href="https://symu.co/" class="modal__btn" target="_blank">www.symu.co</a>
+    <span class="modal__close">+</span>
+  </div>
+</div>
+
+<div class="cookies">
   <input type="checkbox" id="accept">
   <div class="cookies__container">
     <h2 class="visually-hidden">Cookies modal</h2>
     <p class="cookies__text">This site uses cookies, so that my service can work better.</p>
     <label class="cookies__btn" for="accept">Accept</label>
   </div>
-</section>
+</div>
+
+<div class="arrow-button arrow-button--up">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="arrow-button__icon">
+    <use xlink:href="#arrow"/>
+  </svg>
+  <span class="visually-hidden">Наверх</span>
+</div>
+<div class="arrow-button arrow-button--down">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" class="arrow-button__icon">
+    <use xlink:href="#arrow"/>
+  </svg>
+  <span class="visually-hidden">Вниз</span>
+</div>
+
+<script src="js/up-down-button.js"></script>
+<script src="js/modal.js"></script>
 
 </body>
 </html>
