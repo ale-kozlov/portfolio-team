@@ -12,6 +12,7 @@ html {
 }
 
 body {
+  min-width: 320px;
   font-family: Lato, Arial, sans-serif;
   font-size: 16px;
   line-height: 2.18;
@@ -706,7 +707,7 @@ body {
 //---------------------------Modal-------------------------
 
 .modal {
-  display: none;
+  display: block;
   width: 100%;
   min-height: 100%;
   background-color: rgba(0,0,0,0.5);
@@ -718,7 +719,7 @@ body {
   z-index: 5;
 
   &__inner {
-    width: 100%;
+    width: 1200px;
     height: 636px;
     padding: 0;
     background-color: #fff;
@@ -731,6 +732,10 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+
+    @media screen and (max-width: 1200px) {
+      width: 98%;
+    }
 
     @media screen and (max-width: 520px) {
       justify-content: center;
@@ -759,7 +764,7 @@ body {
   }
   &__text-block {
     @media screen and (max-width: 520px){
-      margin: 50px auto;
+      margin: 8px auto;
     }
   }
   &__title {
@@ -784,6 +789,7 @@ body {
 
     @media screen and (max-width: 520px) {
       font-size: 18px;
+      line-height: 1.15;
     }
   }
   &__btn {
