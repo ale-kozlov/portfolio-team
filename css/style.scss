@@ -598,13 +598,12 @@ body {
 
     @media screen and (max-width: 850px){
       width: 90%;
-      height: 90%;
+      min-height: 100%;
       padding: 15px;
       top: 10px;
     }
     @media screen and (max-width: 520px){
       width: 100%;
-      height: 100%;
       top: 0;
     }
   }
@@ -623,7 +622,7 @@ body {
     color: $main-color;
     text-transform: capitalize;
   }
-  &__input {
+  &__inputs {
     max-width: 520px;
     margin: 8px auto 18px;
 
@@ -652,12 +651,20 @@ body {
       margin: 20px 0;
     }
 
+    &:invalid {
+      border-color: #f00;
+    }
     &:hover {
       border-color: #000;
     }
     &:focus {
       background-color: #cad9fa;
       border-color: $main-color;
+
+      &:invalid {
+        border-color: #f00;
+        background-color: #fcb6b6;
+      }
     }
   }
   &__message {
