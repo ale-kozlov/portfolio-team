@@ -8,7 +8,7 @@ window.onscroll = function () {
         upButton.classList.remove('shown');
     }
 
-    if (window.pageYOffset > 3500) {
+    if (window.pageYOffset > 3300) {
         downButton.classList.add('hidden');
     } else {
         downButton.classList.remove('hidden');
