@@ -310,7 +310,7 @@ input:checked ~ .welcome__menu-wrapper {
   position: fixed;
   top: 18%;
   right: 7%;
-  z-index: 3;
+  z-index: 4;
 }
 #hamburger:checked + label span {
   background-color: transparent;
