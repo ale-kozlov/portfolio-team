@@ -1,4 +1,5 @@
-//@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+$main-color: #3677fd;
+$menu-color: #d2d2d2;
 
 * {
   margin: 0;
@@ -34,6 +35,21 @@ body {
   margin: -1px;
 }
 
+.title {
+  font-family: Lato, Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  text-align: center;
+  color: $main-color;
+  text-transform: capitalize;
+
+  @media screen and (max-width: 520px) {
+    font-size: 35px;
+    padding: 5px;
+    margin: 5px;
+  }
+}
+
 .btn {
   width: 204px;
   height: 56px;
@@ -41,7 +57,7 @@ body {
   border-radius: 28px;
   background-color: #fff;
   padding: 20px 50px;
-  color: #3677fd;
+  color: $main-color;
   font-family: Lato, Arial, sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -123,7 +139,7 @@ body {
     width: 100%;
     height: 1px;
     margin: 60px auto;
-    background-color: #e1e1e1;
+    background-color: $menu-color;
 
     @media screen and (max-width: 520px){
       margin: 15px auto 20px;
@@ -131,17 +147,16 @@ body {
   }
   &__menu-link {
     text-decoration: none;
+    font-family: Lato, Arial, sans-serif;
     font-size: 50px;
     line-height: 2;
     font-weight: 300;
-    color: #d2d2d2;
+    text-transform: capitalize;
+    color: $menu-color;
 
-    @media screen and (max-width: 520px){
-      line-height: 1.5;
-    }
     &:hover,
     &:active {
-      color: #3677fd;
+      color: $main-color;
     }
   }
   &__social {
@@ -155,7 +170,7 @@ body {
     height: 51px;
     padding: 9px;
     border-radius: 50%;
-    background-color: #e1e1e1;
+    background-color: $menu-color;
 
     &--facebook:hover {
       background-color: #4867aa;
@@ -175,16 +190,17 @@ body {
     }
   }
   &__lang {
-    color: #e1e1e1;
+    color: $menu-color;
     margin: 14px 20px;
     align-self: flex-end;
     cursor: pointer;
 
     @media screen and (max-width: 520px){
       align-self: center;
+      margin: 20px auto;
     }
     &:hover {
-      color: #3677fd;
+      color: $main-color;
     }
   }
   &__lang-text {
@@ -235,11 +251,21 @@ body {
     max-width: 805px;
     text-align: center;
     margin-bottom: 23px;
+
+    @media screen and (max-width: 520px){
+      font-size: 35px;
+      margin: 30px auto 10px;
+    }
   }
   &__text {
     max-width: 805px;
     text-transform: uppercase;
     margin-bottom: 58px;
+
+    @media screen and (max-width: 520px){
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -295,7 +321,7 @@ body {
         top: 50%;
         bottom: initial;
         transition-duration: .5s;
-        background-color: #3687fe;
+        background-color: $main-color;
       }
       &::before {
         transform: rotate(45deg);
@@ -305,7 +331,7 @@ body {
       }
     }
     @media screen and (max-width: 520px){
-      top: 5%;
+      top: 4%;
     }
   }
 }
@@ -321,14 +347,7 @@ body {
     }
   }
   &__title {
-    font-family: Lato, Arial, sans-serif;
-    font-size: 50px;
-    font-weight: 300;
-    text-align: center;
-    color: #368bf3;
-    //padding-top: 100px;
     padding-bottom: 20px;
-    text-transform: capitalize;
   }
   &__text {
     text-align: center;
@@ -349,14 +368,6 @@ body {
       padding: 15px;
     }
   }
-  &__title {
-    font-family: Lato, Arial, sans-serif;
-    font-size: 50px;
-    font-weight: 300;
-    text-align: center;
-    color: #368bf3;
-    text-transform: capitalize;
-  }
   &__list {
     list-style: none;
     margin-top: 80px;
@@ -366,11 +377,18 @@ body {
     @media screen and (max-width: 1175px) {
       justify-content: center;
     }
+    @media screen and (max-width: 850px) {
+      margin-top: 10px;
+    }
   }
   &__item {
     margin: 0 12px 80px;
     cursor: pointer;
-    &:hover .expert__img {
+
+    @media screen and (max-width: 768px) {
+      margin: 10px;
+    }
+        &:hover .expert__img {
       transform: scale(1.2);
       transition: all .5s ease-in;
     }
@@ -378,7 +396,7 @@ body {
   &__subtitle {
     text-align: center;
     font-family: Lato, Arial, sans-serif;
-    color: #3677fd;
+    color: $main-color;
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
@@ -396,6 +414,10 @@ body {
     padding-bottom: 45px;
     display: block;
     margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+      padding: 6px;
+    }
   }
 }
 
@@ -408,12 +430,12 @@ body {
     }
   }
   &__title {
-    color: #3677fd;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 300;
     line-height: 30px;
     margin-bottom: 100px;
+
+    @media screen and (max-width: 768px) {
+      margin: 10px;
+    }
   }
   &__list {
     display: flex;
@@ -426,8 +448,9 @@ body {
     @media screen and (max-width: 1175px) {
       justify-content: center;
     }
-    @media screen and (max-width: 750px){
+    @media screen and (max-width: 768px){
       width: 100%;
+      margin-bottom: 10px;
     }
   }
   &__item {
@@ -458,12 +481,12 @@ body {
     padding: 15px;
   }
   &__title {
-    font-size: 50px;
-    color: #3677fd;
-    font-weight: 300;
-    text-align: center;
     line-height: 25px;
     margin-bottom: 70px;
+
+    @media screen and (max-width: 768px) {
+      margin: 0 auto 20px;
+    }
   }
   &__container {
     margin: 0 auto;
@@ -592,12 +615,17 @@ body {
     font-weight: 400;
     line-height: 98px;
     text-align: center;
-    color: #368bf3;
+    color: $main-color;
     text-transform: capitalize;
   }
   &__input {
     max-width: 520px;
     margin: 8px auto 18px;
+
+    @media screen and (max-width: 520px){
+      width: 80%;
+      margin: 18px auto 28px;
+    }
   }
   &__name,
   &__email,
@@ -615,12 +643,16 @@ body {
     font-weight: 400;
     text-align: left;
 
+    @media screen and (max-width: 520px){
+      margin: 20px 0;
+    }
+
     &:hover {
       border-color: #000;
     }
     &:focus {
       background-color: #cad9fa;
-      border-color: #3677fd;
+      border-color: $main-color;
     }
   }
   &__message {
@@ -657,7 +689,7 @@ body {
     transform: rotate(45deg);
     font-size: 60px;
     font-weight: 300;
-    color: #3677fd;
+    color: $main-color;
     bottom: calc(94% - 15px);
     left: calc(94% - 15px);
     cursor: pointer;
@@ -689,12 +721,18 @@ body {
     border-radius: 10px;
     position: absolute;
     left: 50%;
-    top: 25%;
+    top: 30%;
     transform: translate(-50%);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+
+    @media screen and (max-width: 520px) {
+      justify-content: center;
+      min-height: 100%;
+      top: 0;
+    }
   }
   &__icon {
     width: 362px;
@@ -704,6 +742,21 @@ body {
     background-color: #fff;
     padding: 70px 80px;
     margin-top: -260px;
+
+    @media screen and (max-width: 850px){
+      width: 262px;
+      height: 262px;
+      padding: 20px 30px;
+      margin-top: -200px;
+    }
+    @media screen and (max-width: 520px){
+      margin-top: 0;
+    }
+  }
+  &__text-block {
+    @media screen and (max-width: 520px){
+      margin: 50px auto;
+    }
   }
   &__title {
     font-family: Montserrat, Arial, sans-serif;
@@ -712,6 +765,10 @@ body {
     font-weight: 700;
     text-align: center;
     color: #eb304d;
+
+    @media screen and (max-width: 520px) {
+      font-size: 36px;
+    }
   }
   &__text {
     font-family: Montserrat, Arial, sans-serif;
@@ -720,6 +777,10 @@ body {
     font-weight: 400;
     text-align: center;
     color: #b9bcd1;
+
+    @media screen and (max-width: 520px) {
+      font-size: 18px;
+    }
   }
   &__btn {
     display: block;
@@ -733,7 +794,6 @@ body {
     background-color: rgba(235, 48, 77, 1);
     width: 288px;
     padding: 34px 50px;
-    //margin: 60px auto 0;
     text-align: center;
     text-decoration: none;
     &:hover,
@@ -741,7 +801,7 @@ body {
       background-color: rgba(235, 48, 77, .7);
     }
     &:active {
-      background-color: rgba(235, 48, 77, .9);
+      background-color: rgb(235, 48, 77, .9);
     }
   }
   &__close {
@@ -754,11 +814,6 @@ body {
     top: -30px;
     right: 10px;
     cursor: pointer;
-
-    @media screen and (max-width: 520px){
-      top: 60px;
-      right: 45%;
-    }
   }
 }
 //--------------------------Cookies-------------------------
@@ -784,7 +839,7 @@ body {
   &__text {
     font-size: 16px;
     font-weight: 400;
-    color: #ffffff;
+    color: #fff;
     margin-right: 20px;
 
     @media screen and (max-width: 600px) {
@@ -819,8 +874,8 @@ body {
 
 .arrow-button {
   position: fixed;
-  left: calc(50% - 10px);
-  z-index: 4;
+  left: calc(50% - 15px);
+  z-index: 2;
   padding: 0;
   width: 30px;
   height: 30px;
