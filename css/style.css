@@ -638,12 +638,16 @@ input:checked ~ .welcome__menu-wrapper {
   text-transform: capitalize;
 }
 .feedback__inputs {
-  max-width: 520px;
+  width: 520px;
   margin: 8px auto 18px;
+}
+@media screen and (max-width: 850px) {
+  .feedback__inputs {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 520px) {
   .feedback__inputs {
-    width: 80%;
     margin: 18px auto 28px;
   }
 }
@@ -665,19 +669,12 @@ input:checked ~ .welcome__menu-wrapper {
     margin: 20px 0;
   }
 }
-.feedback__name:invalid, .feedback__email:invalid, .feedback__message:invalid {
+.feedback__name:hover:invalid, .feedback__name:focus:invalid, .feedback__email:hover:invalid, .feedback__email:focus:invalid, .feedback__message:hover:invalid, .feedback__message:focus:invalid {
   border-color: #f00;
 }
-.feedback__name:hover, .feedback__email:hover, .feedback__message:hover {
-  border-color: #000;
-}
-.feedback__name:focus, .feedback__email:focus, .feedback__message:focus {
+.feedback__name:valid, .feedback__email:valid, .feedback__message:valid {
   background-color: #cad9fa;
   border-color: #3677fd;
-}
-.feedback__name:focus:invalid, .feedback__email:focus:invalid, .feedback__message:focus:invalid {
-  border-color: #f00;
-  background-color: #fcb6b6;
 }
 .feedback__message {
   resize: none;
