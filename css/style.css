@@ -611,7 +611,7 @@ input:checked ~ .welcome__menu-wrapper {
 @media screen and (max-width: 850px) {
   .feedback__form {
     width: 90%;
-    height: 90%;
+    min-height: 100%;
     padding: 15px;
     top: 10px;
   }
@@ -619,7 +619,6 @@ input:checked ~ .welcome__menu-wrapper {
 @media screen and (max-width: 520px) {
   .feedback__form {
     width: 100%;
-    height: 100%;
     top: 0;
   }
 }
@@ -638,12 +637,12 @@ input:checked ~ .welcome__menu-wrapper {
   color: #3677fd;
   text-transform: capitalize;
 }
-.feedback__input {
+.feedback__inputs {
   max-width: 520px;
   margin: 8px auto 18px;
 }
 @media screen and (max-width: 520px) {
-  .feedback__input {
+  .feedback__inputs {
     width: 80%;
     margin: 18px auto 28px;
   }
@@ -666,12 +665,19 @@ input:checked ~ .welcome__menu-wrapper {
     margin: 20px 0;
   }
 }
+.feedback__name:invalid, .feedback__email:invalid, .feedback__message:invalid {
+  border-color: #f00;
+}
 .feedback__name:hover, .feedback__email:hover, .feedback__message:hover {
   border-color: #000;
 }
 .feedback__name:focus, .feedback__email:focus, .feedback__message:focus {
   background-color: #cad9fa;
   border-color: #3677fd;
+}
+.feedback__name:focus:invalid, .feedback__email:focus:invalid, .feedback__message:focus:invalid {
+  border-color: #f00;
+  background-color: #fcb6b6;
 }
 .feedback__message {
   resize: none;
