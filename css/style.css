@@ -604,7 +604,7 @@ input:checked ~ .welcome__menu-wrapper {
   top: 80px;
   left: 50%;
   transform: translate(-50%);
-  padding: 0 50px;
+  padding: 0 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
