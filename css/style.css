@@ -154,6 +154,11 @@ input:checked ~ .welcome__menu-wrapper {
   text-transform: capitalize;
   color: #d2d2d2;
 }
+@media screen and (max-width: 520px) {
+  .welcome__menu-link {
+    line-height: 1.7;
+  }
+}
 .welcome__menu-link:hover, .welcome__menu-link:active {
   color: #3677fd;
 }
