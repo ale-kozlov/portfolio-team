@@ -472,11 +472,6 @@ input:checked ~ .welcome__menu-wrapper {
   padding-bottom: 1px;
   margin: 5px;
 }
-@media screen and (max-width: 768px) {
-  .works__item {
-    margin: 10px auto;
-  }
-}
 .works__item:hover {
   box-shadow: 0 0 5px 2px #676565;
   transform: scale(1.05);
@@ -527,6 +522,11 @@ input:checked ~ .welcome__menu-wrapper {
   filter: grayscale(100%);
   opacity: 20%;
 }
+@media screen and (max-width: 768px) {
+  .clients__container__link {
+    margin: 10px auto;
+  }
+}
 .clients__container__link:hover {
   filter: none;
   opacity: 1;
@@ -572,6 +572,14 @@ input:checked ~ .welcome__menu-wrapper {
 @media screen and (max-width: 520px) {
   .footer__text {
     font-size: 20px;
+  }
+}
+.footer__break {
+  display: none;
+}
+@media screen and (max-width: 520px) {
+  .footer__break {
+    display: block;
   }
 }
 .footer__text-bold {
