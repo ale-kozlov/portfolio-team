@@ -465,10 +465,6 @@ body {
     padding-bottom: 1px;
     margin: 5px;
 
-    @media screen and (max-width: 768px) {
-      margin: 10px auto;
-    }
-
     &:hover {
       box-shadow: 0 0 5px 2px #676565;
       transform: scale(1.05);
@@ -513,6 +509,10 @@ body {
     &__link {
       filter: grayscale(100%);
       opacity: 20%;
+
+      @media screen and (max-width: 768px) {
+        margin: 10px auto;
+      }
       &:hover {
         filter: none;
         opacity: 1;
@@ -556,6 +556,12 @@ body {
     }
     @media screen and (max-width: 520px){
       font-size: 20px;
+    }
+  }
+  &__break {
+    display: none;
+    @media screen and (max-width: 520px){
+      display: block;
     }
   }
   &__text-bold {
