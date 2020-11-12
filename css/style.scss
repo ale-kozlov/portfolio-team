@@ -623,11 +623,14 @@ body {
     text-transform: capitalize;
   }
   &__inputs {
-    max-width: 520px;
+    width: 520px;
     margin: 8px auto 18px;
 
-    @media screen and (max-width: 520px){
+    @media screen and (max-width: 850px){
       width: 80%;
+    }
+
+    @media screen and (max-width: 520px){
       margin: 18px auto 28px;
     }
   }
@@ -650,21 +653,15 @@ body {
     @media screen and (max-width: 520px){
       margin: 20px 0;
     }
-
-    &:invalid {
-      border-color: #f00;
-    }
-    &:hover {
-      border-color: #000;
-    }
+    &:hover,
     &:focus {
-      background-color: #cad9fa;
-      border-color: $main-color;
-
       &:invalid {
         border-color: #f00;
-        background-color: #fcb6b6;
       }
+    }
+    &:valid {
+      background-color: #cad9fa;
+      border-color: $main-color;
     }
   }
   &__message {
